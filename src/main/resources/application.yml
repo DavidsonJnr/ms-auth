@@ -1,0 +1,22 @@
+server:
+  port : 9001
+
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: senha
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    format-sql: true
+
+
+app.jwtSecret: p3O5mFjPhs
+app.jwtExpirationMs: 3600
