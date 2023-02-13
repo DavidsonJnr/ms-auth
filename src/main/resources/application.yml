@@ -1,7 +1,9 @@
 server:
-  port : 9001
+  port : 0
 
 spring:
+  application:
+    name: auth
   main:
     allow-circular-references: true
   datasource:
@@ -17,6 +19,10 @@ spring:
     show-sql: true
     format-sql: true
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
 
 app.jwtSecret: p3O5mFjPhs
 app.jwtExpirationMs: 3600
